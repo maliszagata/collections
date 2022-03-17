@@ -1,9 +1,8 @@
 package pl.edu.agh.mwo.java1;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class NewArrayList<E> extends ArrayList<E> implements List<E> {
+public class NewArrayList<E> extends ArrayList<E> {
 
     public String toString() {
 
