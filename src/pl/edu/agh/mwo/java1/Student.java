@@ -1,10 +1,11 @@
 package pl.edu.agh.mwo.java1;
 
+import javax.management.remote.SubjectDelegationPermission;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private final String name;
     private final List<Integer> grades;
 
@@ -32,5 +33,16 @@ public class Student {
                 ", grades=" + grades +
                 ", grades average=" + this.calculateGradesAverage() +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(Student that) {
+        if (this.calculateGradesAverage() > that.calculateGradesAverage()) {
+            return -1;
+        } else if (this.calculateGradesAverage() < that.calculateGradesAverage()) {
+            return 1;
+        }
+        return 0;
     }
 }

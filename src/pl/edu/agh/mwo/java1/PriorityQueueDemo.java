@@ -11,7 +11,7 @@ public class PriorityQueueDemo {
         Student student2 = new Student("Maciek", 1, 1, 1, 5);
         Student student3 = new Student("Kasia", 5, 5, 5, 6, 5, 4);
         Student student4 = new Student("Ania", 1, 2);
-        Queue<Student> students = new PriorityQueue<>(new StudentComparator());
+        Queue<Student> students = new PriorityQueue<>();
         students.add(student1);
         students.add(student2);
         students.add(student3);
